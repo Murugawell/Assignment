@@ -1,0 +1,18 @@
+<img src="../../../assets/catelog/{{item.img.cover}}" alt="Search" class="catelog">
+<div class="row">
+    <div class="column name-overlay">
+        <span class="name">{{item.name}}</span>
+        <span class="category">{{item.category}}</span>
+    </div>
+    <div class="price align-end">
+        {{item.price.amount | currency: item.price.symbol:'symbol':'1.0-2'}}
+    </div>
+</div>
+<div class="row center-center" style="padding: 10px 0;">
+    <div>
+        <app-rating [rating]="item.rating"> </app-rating>
+    </div>
+    <div class="align-end">
+        <img src="../../../assets/svg/add-to-cart.svg" alt="add to cart" class="add-to-card-icon">
+    </div>
+</div>

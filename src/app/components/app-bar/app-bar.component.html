@@ -1,0 +1,14 @@
+<div class="header">
+    <div (click)="filterToggle()">
+        <img src="../../../assets/svg/filter.svg" alt="Filter" class="filter-icon">
+    </div>
+    <div class="link" *ngFor="let link of links"  (click)="linkClicked(link)">{{link.name | uppercase}}</div>
+    <div class="align-right">
+        <div>
+            <img src="../../../assets/svg/cart.svg" alt="Cart" class="filter-icon">
+        </div>
+        <button class="login-btn">LOGIN</button>
+    </div>
+
+
+</div>

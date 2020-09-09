@@ -1,0 +1,11 @@
+<div class="row">
+    <button class="page-item" (click)="pageEvent(currentPage-1)" [disabled]="currentPage===0">
+        <img src="../../../assets/svg/down-arrow.svg" alt="previous" class="previous"> </button>
+    <button *ngFor=" let page of pages" (click)="pageEvent(page-1)"
+        [ngClass]="{'page-item': true, 'selected': (page-1)===(currentPage)}">
+        {{page}}
+    </button>
+    <button class="page-item" (click)="pageEvent(currentPage+1)" [disabled]="currentPage===totalPage-1">
+        <img src="../../../assets/svg/down-arrow.svg" alt="next" class="next">
+    </button>
+</div>

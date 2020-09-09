@@ -1,0 +1,14 @@
+<div class="row wrap" *ngIf="currentData; else elseblock">
+    <span *ngIf="currentData.length===0">
+        No result found
+    </span>
+    <div class="card" *ngFor="let item of currentData" (click)="onClick(item)">
+        <app-card [item]="item"></app-card>
+    </div>
+</div>
+<app-pagination [totalPage]="totalPage" [currentPage]="currentPage" (pageChange)="pageChanges($event)"></app-pagination>
+
+
+<ng-template #elseblock>
+    Loading currentData
+</ng-template>

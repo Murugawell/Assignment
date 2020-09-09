@@ -1,0 +1,10 @@
+<app-bar (filterOpened)="isFilterOpened=!isFilterOpened" (linkClickedEvent)="navigate($event)"></app-bar>
+<div class="row">
+    <div class="filter-section" *ngIf="isFilterOpened">
+        <app-filter [allowedFilterItems]="allowedFilterItems" [data]="data" (filterAppliedEmitter)="filterData($event)">
+        </app-filter>
+    </div>
+    <div class="content">
+  <app-grid [data]="filteredData" [perPageItem] ="perPageItem" (eventTriggered)="gridEvent($event)"></app-grid>
+    </div>
+</div>

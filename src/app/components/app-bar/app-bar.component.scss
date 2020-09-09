@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  height: 72px;
+  overflow: hidden;
+
+  div {
+    margin-right: 30px;
+  }
+
+  div:nth-last-child(1) {
+    margin-right: 0px;
+
+  }
+}
+
+.filter-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.align-right {
+  display: flex;
+  place-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.login-btn {
+  outline: none;
+  border: none;
+  background: none;
+  color: black;
+  cursor: pointer;
+  margin-right: 10px !important;
+}
+
+.search-box,
+.search-box:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #f1c86b;
+}
+
+
+.link {
+  font-size: 12px;
+}

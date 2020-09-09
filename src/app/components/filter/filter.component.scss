@@ -1,0 +1,46 @@
+.title {
+  color: #9f9f9f;
+  font-size: 10px;
+}
+
+.expansion-title {
+  color: #575759;
+  font-size: 14px;
+  padding: 10px 0;
+}
+
+hr {
+  margin: 0;
+  border-color: #e8e8e847;
+}
+
+.btn {
+  color: #032032
+}
+
+.expand-icon {
+  width: 12px;
+  height: 12px;
+}
+
+::ng-deep .ng5-slider .ng5-slider-pointer:after {
+  display: none;
+}
+
+::ng-deep .ng5-slider .ng5-slider-pointer {
+  cursor: pointer;
+  width: 10px !important;
+  height: 10px !important;
+  top: -5px !important;
+  background-color: orange !important;
+  border: 0.5px solid black !important;
+}
+
+.filter-list-item {
+  font-size: 12px;
+}
+
+.hide {
+  width: 0 !important;
+  height: 0 !important;
+}

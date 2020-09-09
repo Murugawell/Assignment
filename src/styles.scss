@@ -1,1 +1,64 @@
 /* You can add global styles to this file, and also import other style files */
+$small: 320px;
+
+
+body {
+  max-width: 1020px;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.align-end {
+  place-content: flex-end;
+  align-items: center;
+  display: flex;
+  width: 100%;
+}
+
+.center-center {
+  place-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.wrap {
+  flex-wrap: wrap;
+  //   justify-content: space-around;
+}
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: fit-content;
+  background-color: #cacaca;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  margin-top: -30px;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}

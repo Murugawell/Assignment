@@ -1,0 +1,31 @@
+<div>
+    <span class="title">FILTER BY</span>
+    <div style="margin-top: 10px;" *ngIf="ready">
+        <div *ngFor="let filterGroup of filterGroups">
+            <div class="row" (click)="filterGroup.isExpanded = !filterGroup.isExpanded">
+                <div class="expansion-title full-width">{{filterGroup.groupName | titlecase }}</div>
+                <div class="align-end">
+                    <img src="../../../assets/svg/down-arrow.svg" alt="expand" class="expand-icon ">
+                </div>
+            </div>
+            <hr *ngIf="!filterGroup.isExpanded">
+            <ng-container *ngIf=" filterGroup.isExpanded">
+                <ng-container *ngIf="filterGroup.groupName==='price'; else elseTemplate">
+                    <ng5-slider (userChangeEnd)="changesMade($event)" [(value)]="value" [(highValue)]="highValue"
+                        [options]="options"></ng5-slider>
+                </ng-container>
+                <ng-template #elseTemplate>
+                    <div *ngFor="let filterItem of filterGroup.items">
+                        <input type="checkbox" [(ngModel)]="filterItem.selected"
+                            (change)="filterApplied(filterGroup.key,filterItem)"> <span class="filter-list-item">
+                            {{filterItem.name | titlecase }}
+                        </span>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </div>
+        <div>
+
+        </div>
+    </div>
+</div>

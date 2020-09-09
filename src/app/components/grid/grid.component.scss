@@ -1,0 +1,57 @@
+.add-to-card-icon {
+  width: 22px;
+  height: 22px;
+}
+
+$small: 480px;
+
+.card {
+  width: 240px;
+  margin: 0 1.5%;
+
+
+}
+
+@media (max-width:$small) {
+  .card {
+    width: 95% !important;
+  }
+}
+
+.name-tile {
+  width: 75%;
+  background: white;
+  margin-top: -27px;
+}
+
+.name {
+  margin-top: 30px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #363636;
+  line-height: 20px;
+}
+
+.category {
+  color: #c2c2c2;
+  font-size: 12px;
+}
+
+.catelog {
+  width: 100%;
+}
+
+.price {
+  font-size: 12px;
+}
+
+.name-overlay {
+  width: 70%;
+  background: white;
+  margin-top: -40px;
+}
+
+.row{
+  width: 100%;
+  place-content: center;
+}

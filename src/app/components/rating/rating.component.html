@@ -1,0 +1,11 @@
+<div class="row">
+    <div *ngFor="let item of ratings">
+        <ng-container *ngIf="item===1; else elseTemplate">
+            <img src="../../../assets/svg/star-checked.svg" alt="rated" class="rating-icon">
+        </ng-container>
+        <ng-template #elseTemplate>
+            <img src="../../../assets/svg/star.svg" alt="unrated" class="rating-icon">
+        </ng-template>
+    </div>
+
+</div>

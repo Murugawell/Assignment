@@ -1,0 +1,28 @@
+.page-item {
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    margin: 10px 5px;
+    font-size: 12px !important;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.selected {
+  background: #032032;
+  color: white;
+}
+
+.previous{
+    transform: rotate(90deg);
+}
+
+.next{
+    transform: rotate(-90deg);
+}
+
+button:disabled{
+cursor: not-allowed;
+}

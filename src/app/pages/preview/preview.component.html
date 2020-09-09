@@ -1,0 +1,42 @@
+<app-bar (linkClickedEvent)="navigate($event)"></app-bar>
+<div class="row" *ngIf="previewData">
+    <div class="left-content">
+        <img src="../../../assets/catelog/{{previewData.img.cover}}" alt="Search" class="preview-img">
+    </div>
+    <div class="center-center into">
+        <img src="../../../assets/into.PNG" alt="">
+    </div>
+    <div class="right-content">
+        <div class="category">
+            {{previewData.category}}
+        </div>
+        <div class="name"> {{previewData.name}} </div>
+        <div class="description">
+            {{previewData.description}}
+        </div>
+        <div class="color">
+            <div class="label">
+                color
+            </div>
+            <div class="circle tooltip" *ngFor="let color of previewData.colors" [style.background]="color">
+                <div class="tooltiptext">{{color}}</div>
+            </div>
+        </div>
+
+        <div class="row action">
+            <div class="column price">
+                <span class="label">Price per unit</span>
+                <span class="value">
+                    {{previewData.price.amount | currency: previewData.price.symbol:'symbol':'1.0-2'}}
+                </span>
+            </div>
+
+            <button class="buy-now" >
+                BUY NOW
+            </button>
+            <div class="add-to-cart">
+                <img src="../../../assets/svg/cart.svg" alt="Cart" class="fil-width full-height">
+            </div>
+        </div>
+    </div>
+</div>
